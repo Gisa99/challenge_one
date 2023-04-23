@@ -1,0 +1,199 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+  /*fonte star wars: font-family: 'Press Start 2P', cursive;  */
+
+
+body{
+    color:#0A3871;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(20, 19, 19);
+}
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    padding: 0px;
+    gap: 40px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    position: absolute;
+    width: 60vw;
+    height: 100px;
+    left: 40px;
+    top: 40px;
+}
+
+.imagem-logo{
+    width: 20%;
+}
+.titulo-logo{
+    line-height: 40px;
+    color: rgb(219, 216, 12);
+   
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 700px;
+}
+
+.container-input{
+  display:flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100vw;
+  margin-left: 140px;
+}
+
+.input{
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3%;
+}
+
+.textarea{
+    margin-top: 180px;
+    border:none;
+    color: rgb(219, 216, 12);
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    width: 680px;
+    height: 280px;
+    text-align: left;
+    background-color: rgb(20, 19, 19);
+    resize: none;
+}
+.textarea::placeholder{
+    color: rgb(219, 216, 12);
+    background-color:rgb(20, 19, 19) ;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px; 
+    border: none; 
+}
+
+textarea:focus, input:focus, select:focus {
+    outline: 0;
+}
+
+.input-text{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    background-color: rgb(20, 19, 19);
+}
+
+.input{
+    margin: 0 auto;  
+}
+
+.input p{
+    font-size: 12px;
+}
+
+.output{
+    height: 550px;
+    width: 400px;
+    margin: 40px 50px 40px 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 24px 32px -5px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 50px;
+}
+
+.img-output{
+    height: 300px;
+    width: 370px;
+}
+
+.text-output{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+#output textarea{
+    color: rgb(219, 216, 12);
+    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px; 
+    border: none; 
+    height: 70%;
+    width: 80%;
+    text-align: left;
+    margin-top: 10px;
+
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 190px;
+    top: 520px;  
+}
+
+.botao-encript{
+    height: 67px;
+    width: 328px;
+    background-color: rgb(219, 216, 12);
+    border-radius: 24px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.botao-descript{
+    height: 67px;
+    width: 328px;
+    background-color:  #D8DFE8;
+    border-radius: 24px;
+    color: rgb(219, 216, 12);
+    border: 1px solid rgb(175, 8, 8);;
+
+}
+.btn-copiar{
+    height: 50px;
+    width: 250px;
+    background-color:  #FFFFFF;
+    border-radius: 24px;
+    color: rgb(175, 8, 8);;
+    border: 1px solid rgb(175, 8, 8);;
+
+}
+
+
+footer{
+    text-align: center;
+    background: linear-gradient( #E5E5E5, rgb(175, 8, 8));
+    opacity: 75%;
+    color: rgb(175, 8, 8);;
+    height: 20vh;
+    line-height: 50px;
+    width: 100vw;
+}
+
+.liks-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.footer-img{
+    height: 30px; 
+}

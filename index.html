@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilo-desktop.css">
+    <link rel="stylesheet" href="css/medias.css">
+    <title>Challenge Alura</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <img class="imagem-logo" src="imagens/artworks-000145636788-tp66o6-t500x500-removebg-preview.png" alt="logo alura">
+        <h1 class="titulo-logo">Ajude nossos amigos rebeldes!</h1>
+    </header>
+    <main class="main-container">
+
+      
+
+        <div class="container-input">
+            <div class="input">
+               <div><textarea class="textarea" id="input-texto" placeholder="Digite seu texto aqui"></textarea></div>
+
+               <div class="input-text">
+                    <img src="imagens/info-button.png" alt="imagem sinalizando atencao">
+                   <p>  Apenas letras maiusculas e sem acento.</p>
+               </div>
+           </div>
+            <div class="output" id="output">
+               <div>
+                <img  class="img-output" src="imagens/r2d2-removebg-preview.png" alt="droid da republica"></div>
+               <div class="text-output">
+                   <h2>Oops! Nenhuma mensagem encontrada</h2>
+                   <span>Digite um texto que deseja criptografar ou descriptografar.</span>
+               </div>
+            </div>
+           </div>
+
+         <div class="buttons">
+            <button onclick="criptografar()" class="botao-encript"> Encriptografar</button>
+            <button onclick="descriptografar()" class="botao-descript"> Descriptografar</button>
+         </div>     
+     </main>
+
+     <footer>
+
+        <p>Desenvolvido por Gisele França</p>
+         
+        <div class="liks-footer">
+            <a  href="https://www.linkedin.com/in/giselefranca-devfrontend/"><img class="footer-img" src="imagens/linkedin.png" alt="Ícone Linkedin"></a>
+            <a  href=""><img class="footer-img" src="imagens/github.png" alt="Ícone Github"></a>
+        </div>
+
+
+     </footer>
+
+     <script>
+        
+        var textInput = document.querySelector("#input-texto");
+        var output = document.querySelector("#output");
+
+
+            function criptografar(){
+
+            var texto = textInput.value;
+
+            var resultCripto = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat")
+
+            
+            document.getElementById('output').innerHTML = '<textarea readonly id="input-texto">' + resultCripto + 
+            '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+            }
+
+            function descriptografar(){
+
+                var texto = textInput.value;
+
+                var resultDescripto = texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+            
+                document.getElementById('output').innerHTML = '<textarea readonly id="input-texto">' + resultDescripto + 
+                '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()"> Copiar</button>'
+            }
+
+            function copiar() {
+                       
+                var textoCop = document.getElementById('output').querySelector('textarea');
+            
+                textoCop.select();
+                document.execCommand('copy');
+                alert("Sua mensagem foi criptografada e transferida para esta unidade R2-D2.");
+        
+            }  
+
+        
+
+
+     </script>
+    
+</body>
+</html>
